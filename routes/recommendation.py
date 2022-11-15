@@ -14,15 +14,6 @@ def get_recommendations():
     return recommendations
 
 
-@recommendation.get('/recommendation/{id_rec}')
-def get_recommendation_by_id(id_rec:int):
-    for recommendation in recommendations:
-        if recommendation["id"] == id_rec:
-            return recommendation
-
-    raise HTTPException(status_code=404, detail="recommendation not found!")
-
-
 @recommendation.post('/userpreference')
 def post_user_preference(userPreference:UserPreference):
     print(userPreference)
@@ -34,6 +25,17 @@ def post_user_preference(userPreference:UserPreference):
 def get_user_preferences():
     return user_preferences
 
+@recommendation.get('/userpreference/{user_id}/team')
+def get_teams_by_user(user_id:int):
+    team_users = []
+    for user in user_preferences:
+        if user["userId"] == user_id:
+            team_users.append(user)
+
+    if len(team_users) > 0:
+        return team_users
+    else:        
+        raise HTTPException(status_code=404, detail="User not found")
 
 @recommendation.get('/recommendation/userpreference/{user_id}')
 def create_recommendation_by_user_preferences(user_id:int):
@@ -112,13 +114,10 @@ def create_recommendation_by_user_preferences(user_id:int):
 
     print(recommendations_obtain)
     
-    #Solo el contador de recomendaciones falta colocarlo como ordinal nada mas y ya estaria listo el backend
     
-    contrecommendation = 1
-    
-    recommendations.append({'id':contrecommendation+1,'content':recommendations_obtain}) 
+    recommendations.append({'userId':user_id ,'content':recommendations_obtain}) 
 
     if len(recommendations) > 0:
-        raise HTTPException(status_code=200, detail="Creation of recommendation succeed!")
+        return recommendations[-1]
     else:
         raise HTTPException(status_code=404, detail="No recommendation created!")
