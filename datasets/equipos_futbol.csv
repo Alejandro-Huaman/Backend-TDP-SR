@@ -1,0 +1,63 @@
+teamId,name,gamestyle
+1,Alianza Lima,mixed|defensive|offensive
+2,Universitario de Deportes,mixed|defensive|offensive
+3,Sporting Cristal,offensive|mixed
+4,Melgar,offensive|defensive
+5,Cesar Vallejo,defensive
+6,Sport Huancayo,defensive|offensive
+7,Cienciano,offensive|defensive
+8,River Plate,mixed|defensive|offensive
+9,Boca Juniors,mixed|defensive|offensive
+10,Racing,offensive
+11,Independiente,mixed|offensive
+12,Estudiantes de la Plata,mixed|defensive|offensive
+13,Colon de Santa fe,offensive
+14,Talleres de Cordoba,defensive
+15,Flamengo,mixed|defensive|offensive
+16,Palmeiras,mixed|defensive|offensive
+17,Atletico Mineiro,mixed
+18,Atletico Paranaense,defensive
+19,Internacional,offensive|mixed
+20,Santos,defensive|offensive
+21,Sao Paulo,offensive
+22,Corinthians,defensive
+23,Independiente del Valle,mixed|defensive|offensive
+24,LDU Quito,mixed
+25,Barcelona SC,defensive|offensive
+26,Emelec,offensive
+27,Olimpia,defensive|offensive
+28,Libertad,mixed
+29,Guarani,defensive
+30,Nacional,defensive
+31,Peñarol,offensive
+32,Real Madrid,mixed|defensive|offensive
+33,FC Barcelona,mixed|defensive|offensive
+34,Atletico de Madrid,defensive
+35,Napoli,mixed
+36,Liverpool FC,mixed|defensive|offensive
+37,Ajax,mixed|offensive
+38,Porto,offensive
+39,Club Brujas,defensive
+40,Bayern Leverkusen,offensive
+41,Bayern Munich,mixed|offensive
+42,Inter de Milan,mixed|defensive
+43,Tottenham Hotspur,defensive|offensive
+44,Eintracht Frankfurt,offensive
+45,Sporting Lisboa,defensive
+46,Marsella,defensive
+47,Chelsea,mixed|offensive
+48,AC Milan,mixed|defensive|offensive
+49,RB Salzburg,offensive
+50,Dinamo Zagreb,defensive
+51,RB Leipzig,mixed|offensive
+52,Shakhtar Donetsk,defensive
+53,Celtic FC,defensive
+54,Manchester City,mixed|defensive|offensive
+55,Borussia Dortmund,offensive
+56,Sevilla,offensive
+57,Kobenhavn,defensive
+58,Paris Saint-Germain,mixed|defensive|offensive
+59,Benfica,offensive
+60,Juventus,mixed|defensive|offensive
+61,Maccabi Haifa,defensive|offensive
+62,Manchester United,mixed|defensive|offensive
