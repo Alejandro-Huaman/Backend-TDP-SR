@@ -51,6 +51,14 @@ def get_recommendation_by_user(user_id:int):
     else:        
         raise HTTPException(status_code=404, detail="User not found")
 
+@recommendation.delete('/userpreference/{user_id}/team/{team_name}')
+def delete_user_preference_by_team_name(team_name:str,user_id:int):
+    for index,preference in enumerate(user_preferences):
+        if preference["name"] == team_name and preference['userId'] == user_id:
+            user_preferences.pop(index)
+            raise HTTPException(status_code=200, detail="User preference deleted successfully!")        
+    raise HTTPException(status_code=404, detail="Post not found")
+
 
 @recommendation.post('/recommendation/userpreference/{user_id}')
 def create_recommendation_by_user_preferences(user_id:int):
