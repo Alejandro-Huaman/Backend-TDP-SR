@@ -25,6 +25,7 @@ def post_user_preference(userPreference:UserPreference):
 def get_user_preferences():
     return user_preferences
 
+
 @recommendation.get('/userpreference/{user_id}/team')
 def get_teams_by_user(user_id:int):
     team_users = []
@@ -37,7 +38,21 @@ def get_teams_by_user(user_id:int):
     else:        
         raise HTTPException(status_code=404, detail="User not found")
 
-@recommendation.get('/recommendation/userpreference/{user_id}')
+
+@recommendation.get('/recommendation/user/{user_id}')
+def get_recommendation_by_user(user_id:int):
+    recommendation_user = []
+    for recom in recommendations:
+        if recom["userId"] == user_id:
+            recommendation_user.append(recom)
+
+    if len(recommendation_user) > 0:
+        return recommendation_user
+    else:        
+        raise HTTPException(status_code=404, detail="User not found")
+
+
+@recommendation.post('/recommendation/userpreference/{user_id}')
 def create_recommendation_by_user_preferences(user_id:int):
     equipos = pd.read_csv('datasets/equipos_futbol.csv')
     calificaciones = pd.read_csv('datasets/matriz_calificaciones.csv')
